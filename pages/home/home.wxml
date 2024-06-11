@@ -1,2 +1,36 @@
-<!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<view>
+  <!-- 轮播图 -->
+  <view class="sw01">
+    <swiper indicator-dots="true" indicator-color="white" autoplay="true" interval="3000">
+    <swiper-item>
+      <image src="/pages/image/01.png"/>
+    </swiper-item>
+    <swiper-item>
+      <image src="/pages/image/02.png"/>
+    </swiper-item>
+    <swiper-item>
+      <image src="/pages/image/03.png"/>
+    </swiper-item>
+  </swiper>
+  </view>
+
+  <!-- 滚动公告 -->
+  <view class="sw02">
+    <swiper vertical="true" autoplay="true" interval="3000">
+      <swiper-item>
+        <text>公告1</text>
+      </swiper-item>
+      <swiper-item>
+        <text>公告2</text>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!-- 方块导航 -->
+  <view class="blocks">
+    <view class="block">重大时间</view>
+    <view class="block">公司要闻</view>
+    <view class="block">新增客户</view>
+    <view class="block">网上办公</view>
+  </view>
+</view>

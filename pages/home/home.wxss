@@ -1,1 +1,59 @@
-/* pages/home/home.wxss */
+/* 轮播图样式调整 */
+.sw01 swiper{
+  height: 350rpx;
+}
+.sw01 swiper-item image{
+  width: 100%; /* 宽度为容器的100% */
+  height: 100%;
+}
+
+
+/* 滚动公告样式调整 */
+.sw02 swiper{
+  height: 50px; /* 设置公告栏高度 */
+  line-height: 50px; /* 设置字体行高与公告栏高度一致 */
+  background-color: lightgray;
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+}
+
+.sw02 swiper-item text {
+  text-align: center;
+  color: #333;
+  display: block; /* 确保文本块级显示 */
+}
+
+/* 方块导航样式调整为2行2列 */
+.blocks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 两列 */
+  grid-gap: 10px; /* 格子间隔 */
+  margin-top: 20px;
+}
+
+.block {
+  height: 350rpx; /* 设置高度 */
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  margin: 10rpx;
+}
+
+.block:nth-child(1) {
+  background-color: #f65314; /* 红色 */
+}
+
+.block:nth-child(2) {
+  background-color: #7cbb00; /* 绿色 */
+}
+
+.block:nth-child(3) {
+  background-color: #00a1f1; /* 蓝色 */
+}
+
+.block:nth-child(4) {
+  background-color: #ffbb00; /* 黄色 */
+}

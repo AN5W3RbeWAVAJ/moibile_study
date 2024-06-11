@@ -28,7 +28,7 @@
       <input type="text" placeholder="请输入账号名"/>
     </view>
     <view>
-      <input type="safe-password" placeholder="请输入账号名"/>
+      <input type="safe-password" placeholder="请输入密码"/>
     </view>
     <view>
       <input type="number" placeholder="请输入电话号码"/>
