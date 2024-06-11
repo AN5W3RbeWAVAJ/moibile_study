@@ -12,7 +12,7 @@
 .sw02 swiper{
   height: 50px; /* 设置公告栏高度 */
   line-height: 50px; /* 设置字体行高与公告栏高度一致 */
-  background-color: lightgray;
+  background-color: lightblue;
   align-items: center; /* 垂直居中 */
   justify-content: center; /* 水平居中 */
 }
