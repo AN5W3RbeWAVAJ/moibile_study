@@ -1,2 +1,41 @@
+<view>
+  <!-- 图片 -->
+  <view class="head">
+    <image src="/pages/image/head.jpg"></image>
+  </view>
 
-<text>你好</text>
+  <!-- 登录注册切换按钮 -->
+  <view class="sw">
+    <switch bindchange="do_change"></switch>切换登录和注册
+  </view>
+
+  <!-- 登录表单 -->
+  <view class="form" wx:if="{{is_login}}">
+    <view>
+      <input type="text" placeholder="请输入账号名"/>
+    </view>
+    <view>
+      <input type="safe-password" placeholder="请输入密码"/>
+    </view>
+    <view>
+      <button type="primary">登录</button>
+    </view>
+  </view>
+
+  <!-- 注册表单 -->
+  <view class="form" wx:if="{{is_reg}}">
+    <view>
+      <input type="text" placeholder="请输入账号名"/>
+    </view>
+    <view>
+      <input type="safe-password" placeholder="请输入账号名"/>
+    </view>
+    <view>
+      <input type="number" placeholder="请输入电话号码"/>
+    </view>
+    <view>
+      <button type="primary">注册</button>
+    </view>
+  </view>
+
+</view>

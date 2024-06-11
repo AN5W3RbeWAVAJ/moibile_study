@@ -1,5 +1,12 @@
 /* pages/login/login.wxss */
-text {
-  font-size: 50rpx;
-  color: red;
+.head image {
+  height: 400rpx;
+}
+
+.form input{
+  margin: 80rpx;
+}
+
+.sw{
+  text-align: center;
 }

@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    is_login: true,
+    is_reg: false
   },
 
   /**
@@ -14,7 +15,20 @@ Page({
   onLoad(options) {
 
   },
-
+// 切换登录和注册
+do_change(e){
+  if(e.detail.value){
+    this.setData({
+      is_login: false,
+      is_reg: true
+    })
+  } else {
+    this.setData({
+      is_login: true,
+      is_reg: false
+    })
+  }
+},
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
