@@ -1,0 +1,5 @@
+/* pages/login/login.wxss */
+text {
+  font-size: 50rpx;
+  color: red;
+}
