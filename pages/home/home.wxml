@@ -28,7 +28,7 @@
 
   <!-- 方块导航 -->
   <view class="blocks">
-    <view class="block">重大时间</view>
+    <view class="block">重大事件</view>
     <view class="block">公司要闻</view>
     <view class="block">新增客户</view>
     <view class="block">网上办公</view>

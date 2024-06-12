@@ -10,3 +10,9 @@
 .sw{
   text-align: center;
 }
+.info{
+  margin:60rpx;
+}
+.info view{
+  margin:60rpx;
+}

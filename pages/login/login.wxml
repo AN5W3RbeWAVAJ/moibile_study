@@ -4,38 +4,50 @@
     <image src="/pages/image/head.jpg"></image>
   </view>
 
+  <!-- 登录后显示用户信息 -->
+  <view class="info" wx:if="{{is_login_success}}">
+    <view>账户名：{{userName}}</view>
+    <view>邮箱: xxx@email.com</view>
+    <view>userIdStr：{{userIdStr}}</view>
+    <view>
+      <button type="primary" bind:tap="do_exit">退出</button>
+    </view>
+  </view>
+
+  <view wx:if="{{!is_login_success}}">
   <!-- 登录注册切换按钮 -->
   <view class="sw">
     <switch bindchange="do_change"></switch>切换登录和注册
   </view>
-
   <!-- 登录表单 -->
   <view class="form" wx:if="{{is_login}}">
     <view>
-      <input type="text" placeholder="请输入账号名"/>
+      <input bindblur="do_input" data-name="userName" type="text" placeholder="请输入账号名"/>
     </view>
     <view>
-      <input type="safe-password" placeholder="请输入密码"/>
+      <input bindblur="do_input" data-name="userPwd" type="safe-password" placeholder="请输入密码"/>
     </view>
     <view>
-      <button type="primary">登录</button>
+      <button type="primary" bind:tap="do_submit">登录</button>
     </view>
   </view>
 
   <!-- 注册表单 -->
   <view class="form" wx:if="{{is_reg}}">
     <view>
-      <input type="text" placeholder="请输入账号名"/>
+      <input  bindblur="do_input" data-name="userName" type="text" placeholder="请输入账号名"/>
     </view>
     <view>
-      <input type="safe-password" placeholder="请输入密码"/>
+      <input  bindblur="do_input" data-name="userPwd" type="safe-password" placeholder="请输入密码"/>
     </view>
     <view>
-      <input type="number" placeholder="请输入电话号码"/>
+      <input bindblur="do_input" data-name="userPhone" type="number" placeholder="请输入电话号码"/>
     </view>
     <view>
       <button type="primary">注册</button>
     </view>
   </view>
+  </view>
+  
 
 </view>
