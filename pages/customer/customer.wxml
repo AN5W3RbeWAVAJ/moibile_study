@@ -1,18 +1,18 @@
 
-<view>
+<view class="page">
   <view class="head">
     <image src="/pages/image/head.jpg"></image>
   </view>
-  <view class="list" wx:for="{{customerList}}" wx:key="id">
-      <view class="block">
+  <scroll-view scroll-y="true" class="list">
+      <view class="block" wx:for="{{customerList}}">
         <view>
           <image src="/pages/image/vip.png"></image>
         </view>
         <view class="block_text">
-          <text>客户编号: {{item.khno}}</text>
-          <text>姓名: {{item.name}}</text>
-          <text>电话: {{item.phone}}</text>
+          <text>编号：{{item.khno}}</text>
+          <text>名称：{{item.name}}</text>
+          <text>电话：{{item.phone}}</text>
         </view>
       </view>
-  </view>
+  </scroll-view>
 </view>

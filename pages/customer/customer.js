@@ -7,8 +7,12 @@ Page({
     wx.request({
       url: 'http://localhost/crm/customer/list', // 您的后端接口地址
       method: 'GET',
+      header: { 
+        'content-type': 'application/x-www-form-urlencoded' ,
+        "cookie":"userIdStr="+wx.getStorageSync('userIdStr')
+      },/*表单模式 */
       success: (res) => {
-        if (res.data.code === 200 && res.data.msg === "success") {
+        if (res.data.code === 200) {
           this.setData({
             customerList: res.data.result
           });
