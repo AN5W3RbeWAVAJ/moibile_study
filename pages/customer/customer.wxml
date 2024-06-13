@@ -1,2 +1,18 @@
-<!--pages/customer/customer.wxml-->
-<text>pages/customer/customer.wxml</text>
+
+<view>
+  <view class="head">
+    <image src="/pages/image/head.jpg"></image>
+  </view>
+  <view class="list" wx:for="{{customerList}}" wx:key="id">
+      <view class="block">
+        <view>
+          <image src="/pages/image/vip.png"></image>
+        </view>
+        <view class="block_text">
+          <text>客户编号: {{item.khno}}</text>
+          <text>姓名: {{item.name}}</text>
+          <text>电话: {{item.phone}}</text>
+        </view>
+      </view>
+  </view>
+</view>

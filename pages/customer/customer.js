@@ -1,18 +1,26 @@
 // pages/customer/customer.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    customerList: []
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
+  onLoad: function() {
+    wx.request({
+      url: 'http://localhost/crm/customer/list', // 您的后端接口地址
+      method: 'GET',
+      success: (res) => {
+        if (res.data.code === 200 && res.data.msg === "success") {
+          this.setData({
+            customerList: res.data.result
+          });
+        } else {
+          // 处理错误情况
+          wx.showToast({
+            title: '数据加载失败',
+            icon: 'none'
+          });
+        }
+      }
+    });
   },
 
   /**

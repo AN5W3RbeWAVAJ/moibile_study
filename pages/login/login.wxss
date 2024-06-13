@@ -1,18 +1,85 @@
 /* pages/login/login.wxss */
+
+/* 全局样式 */
+page {
+  background-color: #f8f8f8;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* 头部图片样式 */
 .head image {
-  height: 400rpx;
+  width: 100%;
+  height: 300rpx; /* 调整图片高度 */
+  border-bottom: 1px solid #eaeaea; /* 添加底部边框 */
 }
 
-.form input{
-  margin: 80rpx;
-}
-
-.sw{
+/* 登录注册切换按钮样式 */
+.sw {
   text-align: center;
+  margin-top: 30rpx;
 }
-.info{
-  margin:60rpx;
+
+/* 切换按钮样式 */
+.switch {
+  display: inline-block;
+  margin: 0 10rpx;
 }
-.info view{
-  margin:60rpx;
+
+/* 表单样式 */
+.form {
+  padding: 40rpx;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+  margin: 20rpx;
+}
+
+/* 输入框样式 */
+.form input {
+  display: block;
+  width: 90%;
+  margin: 20rpx auto;
+  padding: 20rpx;
+  border: 1px solid #eaeaea;
+  border-radius: 5rpx;
+}
+
+/* 按钮样式 */
+.form button {
+  display: block;
+  width: 90%;
+  margin: 20rpx auto;
+  padding: 20rpx;
+  background-color: #1aad19; /* 微信绿色 */
+  color: white;
+  border: none;
+  border-radius: 5rpx;
+  font-weight: bold;
+}
+
+/* 用户信息显示样式 */
+.info {
+  padding: 20rpx;
+  background-color: #ffffff;
+  margin: 20rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+/* 用户信息内部元素样式 */
+.info view {
+  margin: 10rpx 0;
+  padding: 10rpx;
+  border-bottom: 1px solid #eaeaea; /* 添加分隔线 */
+}
+
+/* 最后一个元素没有底部边框 */
+.info view:last-child {
+  border-bottom: none;
+}
+
+/* 退出按钮样式 */
+.info button {
+  background-color: #ff4d4f; /* 红色 */
+  margin-top: 20rpx;
 }
